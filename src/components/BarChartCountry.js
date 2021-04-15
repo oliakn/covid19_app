@@ -6,7 +6,7 @@ const BarChart = ({name}) => {
     useEffect(() => {
         axios(`https://disease.sh/v3/covid-19/countries/${name}`)
             .then(rec => setInfo(rec.data))
-    }, [])
+    }, [name])
     let label = [[info].reduce((acc,rec) => [...acc, rec.country], [])]
     let confirmed = [[info].reduce((acc,rec) => [...acc, rec.cases], [])]
     let death = [[info].reduce((acc,rec) => [...acc, rec.deaths], [])]
