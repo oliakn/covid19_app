@@ -16,7 +16,7 @@ const Country = () => {
                 setCountry(rec.data)
                 setIsLoading(false)
             })
-    }, [])
+    }, [name])
     console.log(country)
     return (
         <Layout>
